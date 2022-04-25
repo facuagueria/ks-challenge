@@ -21,7 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/dentists', [DentistController::class, 'index']);
-//Route::get('/filter-dentists/name/{name?}/surname/{surname?}/country/{country_id?}/created_at/{created_at?}', [DentistController::class, 'getByFilter']);
+
 Route::get('/filter-dentists', [DentistController::class, 'getByFilter']);
 
 Route::get('/countries', [CountryController::class, 'index']);
